@@ -7,10 +7,10 @@
     <section class="post_form">
         <form action="/edit/{{posts.id}}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            <input type="text" name="name"  value="{{ posts.name }}" required>
-            <input name="body" value="{{ posts.body }}" style="text-overflow: clip;">
-            {% if posts.image.url %}
-            <img class="Image" src="{{ posts.image.url }}" style="width: 125px;" >
+            <input type="text" name="name"  value="{{ post.name }}" required>
+            <input name="body" value="{{ post.body }}" style="text-overflow: clip;">
+            {% if post.image.url %}
+            <img class="Image" src="{{ post.image.url }}">
             {% endif %}
             <br>
             <input id="uploadfile" type="file" name="image">

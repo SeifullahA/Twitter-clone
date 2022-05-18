@@ -53,6 +53,10 @@ Post
     bottom: 0;
 }
 
+.Image {
+    width: 70%;
+}
+
 a#Cancel {
     text-decoration: none;
     color: black;
