@@ -5,13 +5,15 @@
         <a id="eHeading" href="#">Edit</a>
     </div>
     <section class="post_form">
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="/edit/{{posts.id}}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <input type="text" name="name" placeholder="Name" value="{{ posts.name }}" minlength="3" maxlength="14" required>
             <textarea name="body" placeholder="{{ posts.body }}" maxlength="140" style="text-overflow: clip;"></textarea>
+            {% if posts.image.url %}
             <img class="Image" src="{{ posts.image.url }}" style="width: 125px;" >
             <br>
             <input id="uploadfile" type="file" name="image">
+            {% endif %}
             <div class="post">
                 <a id="Cancel" href="{% url 'index'%}" id="cancel" type="submit">Cancel</a>
                 <input id="btn" type="submit" value="Post" />
