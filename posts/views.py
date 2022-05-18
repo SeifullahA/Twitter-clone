@@ -55,5 +55,4 @@ def edit(request, post_id):
             return HttpResponseRedirect('/')
         else:
             return HttpResponseRedirect("not valid")
-    form = PostForm
     return render(request, "edit.html", {"post": post})
