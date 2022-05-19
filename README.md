@@ -15,7 +15,7 @@ This Twitter Clone is a small project using HTML / CSS / JavaScript Using Django
 
 ## Installation
 
-No need to install any software just open html.
+* No need to install any software just open index.html.
 
 ## User Story
 * Users can post tweets.
